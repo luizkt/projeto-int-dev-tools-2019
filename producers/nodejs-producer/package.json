@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-producer",
+  "version": "1.0.0",
+  "description": "CSV reader and Kafka Producer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizkt/projeto-int-dev-tools-2019.git"
+  },
+  "keywords": [
+    "kafka",
+    "csv",
+    "producer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luizkt/projeto-int-dev-tools-2019/issues"
+  },
+  "homepage": "https://github.com/luizkt/projeto-int-dev-tools-2019#readme"
+}
