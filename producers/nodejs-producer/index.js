@@ -1,13 +1,9 @@
 const csv = require('csv-parser');
 const fs = require('fs');
 
-// var kafka = require('kafka-node'),
-//     Producer = kafka.Producer,
-//     client = new kafka.KafkaClient({kafkaHost: '10.3.100.196:9092'}),
-//     producer = new Producer(client);
+var producer = require('./kafka/producer.js');
 
 var dados = [];
-var index = 0;
 
 fs.createReadStream('./../../files/bolsaFamiliaTestes.csv', 'utf8')
     .pipe(csv({ separator: ';' }))
@@ -16,8 +12,6 @@ fs.createReadStream('./../../files/bolsaFamiliaTestes.csv', 'utf8')
         row["VALOR PARCELA"] = parseFloat(row["VALOR PARCELA"].replace(',', '.'));
 
         dados.push(row);
-        console.log(row);
-
         // row format
         // {
         //     'MÊS REFERÊNCIA': '201901',
@@ -34,4 +28,7 @@ fs.createReadStream('./../../files/bolsaFamiliaTestes.csv', 'utf8')
     })
     .on('end', () => {
         console.log('CSV file successfully processed');
+        producer.sendMessage(dados.toString()).then(
+            console.log('Data send to kafka')
+        );
     })

@@ -24,6 +24,6 @@
   "dependencies": {
     "csv-parser": "^2.3.2",
     "fs": "0.0.1-security",
-    "kafka-node": "^5.0.0"
+    "kafkajs": "^1.11.0"
   }
 }
