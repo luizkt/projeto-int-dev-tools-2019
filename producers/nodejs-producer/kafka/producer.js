@@ -7,15 +7,20 @@ const kafka = new Kafka({
 
 const producer = kafka.producer()
 
-const sendMessage = async (data) => {
-    // Producing
-    await producer.connect()
-    await producer.send({
+const sendMessage = (data) => {
+    return producer.send({
         topic: 'entrada',
         messages: [
             {value: data},
         ],
     })
+    .then(console.log)
+    .catch(e => console.error(`[example/producer] ${e.message}`, e))
 }
 
-exports.sendMessage = sendMessage;
+const run = async (data) => {
+    await producer.connect()
+    setInterval(sendMessage(data), 3000)
+}
+
+exports.run = run;
