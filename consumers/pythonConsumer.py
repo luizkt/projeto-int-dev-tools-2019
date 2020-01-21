@@ -34,7 +34,7 @@ class Estado(Enum):
     SE=25
     TO=26
 
-consumer = KafkaConsumer('topicoBolsaFamilia' ,
+consumer = KafkaConsumer('entrada' ,
         bootstrap_servers=['localhost:9092'],
         auto_offset_reset='earliest',
         enable_auto_commit=True)
