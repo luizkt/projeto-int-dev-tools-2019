@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/luizkt/projeto-int-dev-tools-2019/issues"
   },
-  "homepage": "https://github.com/luizkt/projeto-int-dev-tools-2019#readme"
+  "homepage": "https://github.com/luizkt/projeto-int-dev-tools-2019#readme",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "fs": "0.0.1-security",
+    "kafkajs": "^1.11.0"
+  }
 }
