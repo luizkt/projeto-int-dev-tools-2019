@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/luizkt/projeto-int-dev-tools-2019#readme",
   "dependencies": {
-    "csv-parser": "^2.3.2",
+    "csv-parse": "^4.8.5",
     "fs": "0.0.1-security",
-    "kafkajs": "^1.11.0"
+    "kafka-node": "^5.0.0"
   }
 }
