@@ -3,6 +3,7 @@ package br.com.fiap.consumer.kafka.config;
 import br.com.fiap.consumer.kafka.dto.KafkaMessage;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
@@ -17,7 +18,7 @@ import java.util.Map;
 @Configuration
 public class KafkaConsumerConfig {
 
-
+    @Bean
     public ConsumerFactory<String, KafkaMessage> consumerFactory(){
 
         Map<String, Object> configs = new HashMap<>();
@@ -29,6 +30,7 @@ public class KafkaConsumerConfig {
         return new DefaultKafkaConsumerFactory<>(configs, new StringDeserializer(), new JsonDeserializer<>(KafkaMessage.class));
     }
 
+    @Bean
     public ConcurrentKafkaListenerContainerFactory<String, KafkaMessage> kafkaListenerContainerFactory(){
         ConcurrentKafkaListenerContainerFactory<String, KafkaMessage> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
