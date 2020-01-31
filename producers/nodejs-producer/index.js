@@ -22,21 +22,28 @@ fs.createReadStream(inputFile).pipe(parser);
 function handleCurrentRecord(currentRecord) {
     var line = RecordArray[currentRecord];
 
-    line[7] = parseFloat(line[7].replace(',', '.'));
+    if(line != null){
+       line[7] = parseFloat(line[7].replace(',', '.'));
 
-    var record = {
-        "mesReferencia": line[0]
-        ,"mesCompetencia": line[1]
-        ,"uf": line[2]
-        ,"codigoMunicipioSiafi": line[3]
-        ,"nomeMunicipio": line[4]
-        ,"nisFavorecido": line[5]
-        ,"nomeFavorecido": line[6]
-        ,"valorParcela": line[7]
-    };
-    console.log(JSON.stringify(record));
-    // produce message to Kafka
-    producer.produceKafkaMessage(record);
+       var record = {
+           "mesReferencia": line[0]
+          ,"mesCompetencia": line[1]
+          ,"uf": line[2]
+          ,"codigoMunicipioSiafi": line[3]
+          ,"nomeMunicipio": line[4]
+          ,"nisFavorecido": line[5]
+          ,"nomeFavorecido": line[6]
+          ,"valorParcela": line[7]
+       };
+            
+       console.log(JSON.stringify(record));
+        
+       // produce message to Kafka
+       producer.produceKafkaMessage(record);
 
-    setTimeout(handleCurrentRecord.bind(null, currentRecord + 1), 1);
+       setTimeout(handleCurrentRecord.bind(null, currentRecord + 1), 1);
+    }
+    else{
+       console.log("end of file");
+    }
 }
