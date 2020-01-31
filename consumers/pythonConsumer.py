@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from kafka import KafkaConsumer
-#from json import loads
+import json
 from os import system, name
 from enum import Enum
 
@@ -34,31 +34,29 @@ class Estado(Enum):
     SE=25
     TO=26
 
-consumer = KafkaConsumer('entrada' ,
+consumer = KafkaConsumer('entrada',
         bootstrap_servers=['localhost:9092'],
         auto_offset_reset='earliest',
-        enable_auto_commit=True)
-
-texto  = ['', '', '', '', '', '', '', '0.00']
+        value_deserializer=lambda m: json.loads(m.decode('utf-8')))
 
 lista = [[0 for i in range(3)] for j in range(27)]
 
+#initialize table
 for data in Estado:
     lista[data.value][0] = data.name
+    lista[data.value][1] = 0.0
+    lista[data.value][2] = 0
 
 for message in consumer:
 
-    texto = message.value.replace('"', '').replace(',', '.').split(';')
+    row = message.value
 
-    #ignorar primeira linha
-    if(texto[2] != 'UF'):      
-        
-        #clear terminal para linux
-        _ = system('clear')
-        
-        lista[Estado[texto[2]].value][1] = lista[Estado[texto[2]].value][1] + float(texto[7])
-        lista[Estado[texto[2]].value][2] = lista[Estado[texto[2]].value][2] + 1
+    #clear terminal para linux
+    _ = system('clear')
 
-        for i in range(27):
-            if(lista[i][2] != 0):
-                print('%s, R$ %14.2f, %8d' % (lista[i][0], lista[i][1], lista[i][2]))
+    lista[Estado[row["uf"]].value][1] = lista[Estado[row["uf"]].value][1] + row["valorParcela"]
+    lista[Estado[row["uf"]].value][2] = lista[Estado[row["uf"]].value][2] + 1
+
+    for i in range(27):
+        if(lista[i][2] != 0):
+            print('%s, R$ %14.2f, %8d' % (lista[i][0], lista[i][1], lista[i][2]))
