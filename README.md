@@ -7,6 +7,9 @@ Integrantes:
     Logan Mantovani   - RM 
     Luiz Keese        - RM
     Victor            - RM 
+    
+## Big Picture da solução
+![big_picture](big_picture.png)
 	
 ## Para executar o processo (execução local ubuntu) deve seguir os passos abaixo:
   1) Ter instalado as seguintes aplicações:
@@ -37,6 +40,7 @@ Integrantes:
   4) Abrir o terminal e executar o script ```load-kafka-nodejs-unix.sh``` na raiz da pasta clonada. A aplicação em Node js irá ler o arquivo csv localizando na pasta ```files```;
       
      a) Tópico criado automaticamente - "entrada";
+     
      b) Aplicação passa a produzir os registros para o tópico "entrada", teste com 11000 registros.
   
   5) Abrir 3 sessões no terminal e executar os seguintes scripts em Python em cada sessão, navegando a partir da raiz do projeto:
@@ -47,7 +51,7 @@ Integrantes:
      
      c) ```python ./consumers/pythonConsumer3.py```; Quantidade de registros consumidos;
   
-  ![exemplo](execucao-local-versao-com-java.gif)
+  ![ExecucaoLocal](ExecucaoLocal.gif)
 
 ## Enunciado do trabalho
 
