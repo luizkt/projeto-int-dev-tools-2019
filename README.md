@@ -46,11 +46,12 @@ Integrantes:
   3) Realizar o clone do projeto via git ```https://github.com/luizkt/projeto-int-dev-tools-2019.git``` e utilizar a branch "master";
 		
   4) Abrir o terminal e executar o script ```load-kafka-nodejs-unix.sh``` na raiz da pasta clonada. 
-  	A aplicação em Node js irá ler o arquivo csv localizando na pasta ```files```;
+  
+     a) A aplicação em Node js irá ler o arquivo csv dos beneficiários do bolsa família (2019_01) localizando na pasta ```files```;
       
-     a) Tópico criado automaticamente - "entrada";
+     b) O Tópico é criado automaticamente no producer com o nome "entrada", mas caso queira criar o tópico antes, executar no terminal após o passo 2.d) o comando ```bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic entrada``` 
      
-     b) Aplicação passa a produzir os registros para o tópico "entrada", teste com 11000 registros.
+     c) Aplicação passa a produzir os registros para o tópico "entrada", teste com 11000 registros.
   
   5) Abrir 3 sessões no terminal e executar os seguintes scripts em Python em cada sessão, navegando a partir da raiz do projeto:
   
@@ -60,7 +61,7 @@ Integrantes:
      
      c) ```python ./consumers/pythonConsumer3.py```; Quantidade de registros consumidos;
      
-  6) Acompanhar execução conforme video abaixo (Execução com 10999 linhas processadas)
+  6) Acompanhar execução conforme video abaixo (Execução com 10999 linhas processadas do arquivo CSV)
   
   ![ExecucaoLocal](https://github.com/luizkt/projeto-int-dev-tools-2019/blob/master/ExecucaoLocal.gif)
 
