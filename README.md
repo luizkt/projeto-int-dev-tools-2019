@@ -1,15 +1,19 @@
 # README do projeto-int-dev-tools-2019
 Utilização de consumidores e produtores utilizando o Kafka 
+
 Kanban Flow do projeto em https://trello.com/b/NdOw7yv7/fiap
 
 Integrantes:
     Jhonatan Oliveira - RM 333990
+    
     Logan Mantovani   - RM 
+    
     Luiz Keese        - RM
+    
     Victor            - RM 
     
 ## Big Picture da solução
-![big_picture](big_picture.png)
+![big_picture](https://github.com/luizkt/projeto-int-dev-tools-2019/blob/master/big_picture.png)
 	
 ## Para executar o processo (execução local ubuntu) deve seguir os passos abaixo:
   1) Ter instalado as seguintes aplicações:
@@ -51,7 +55,7 @@ Integrantes:
      
      c) ```python ./consumers/pythonConsumer3.py```; Quantidade de registros consumidos;
   
-  ![ExecucaoLocal](ExecucaoLocal.gif)
+  ![ExecucaoLocal](https://github.com/luizkt/projeto-int-dev-tools-2019/blob/master/ExecucaoLocal.gif)
 
 ## Enunciado do trabalho
 
