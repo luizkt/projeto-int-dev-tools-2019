@@ -4,13 +4,14 @@ Utilização de consumidores e produtores utilizando o Kafka
 Kanban Flow do projeto em https://trello.com/b/NdOw7yv7/fiap
 
 Integrantes:
-    Jhonatan Oliveira - RM 333990
+
+    Jhonatan Oliveira da Guarda - RM 333990
     
-    Logan Mantovani   - RM 
+    Logan Mantovani Baruch      - RM 334335
     
-    Luiz Keese        - RM
+    Luiz Keese Tabacow          - RM 334017
     
-    Victor            - RM 
+    Vitor de Menezes Cardoso    - RM 333756
     
 ## Big Picture da solução
 ![big_picture](https://github.com/luizkt/projeto-int-dev-tools-2019/blob/master/big_picture.png)
