@@ -27,9 +27,9 @@ Integrantes:
      
      d) Pip ```sudo apt-get install python-pip```;
      
-     e) plugin Pip ```pip install kafka-python```;
+     e) plugin pip kafka-python ```pip install kafka-python```;
 	 
-	 f) Open JDK 11 ```sudo apt install openjdk-11-jdk```
+     f) Open JDK 11 ```sudo apt install openjdk-11-jdk```
      
      g) terminator (opcional) ```sudo apt-get install terminator``` ;
   
