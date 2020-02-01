@@ -10,6 +10,7 @@ Integrantes:
 	
 ## Para executar o processo (execução local ubuntu) deve seguir os passos abaixo:
   1) Ter instalado as seguintes aplicações:
+  
      a) Node js ```sudo apt install nodejs```;
      
      b) plugin Csv-parser ```npm i csv-parser```;
@@ -39,6 +40,7 @@ Integrantes:
      b) Aplicação passa a produzir os registros para o tópico "entrada", teste com 11000 registros.
   
   5) Abrir 3 sessões no terminal e executar os seguintes scripts em Python em cada sessão, navegando a partir da raiz do projeto:
+  
      a) ```python ./consumers/pythonConsumer.py```; Quantidade de beneficíarios por Estado e somatória do benefício por Estado;
      
      b) ```python ./consumers/pythonConsumer2.py```; Beneficiário com maior benefício recebido;
