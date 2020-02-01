@@ -1,4 +1,4 @@
-# README do projeto-int-dev-tools-2019
+# README do projeto-int-dev-tools-2019 34SCJ
 Utilização de consumidores e produtores utilizando o Kafka 
 
 Kanban Flow do projeto em https://trello.com/b/NdOw7yv7/fiap
