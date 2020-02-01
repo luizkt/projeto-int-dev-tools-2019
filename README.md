@@ -32,6 +32,7 @@ Integrantes:
      f) terminator (opcional) ```sudo apt-get install terminator``` ;
   
   2) Executar o Kafka:
+  
      a) Realizar o download do Kafka https://kafka.apache.org/quickstart;
      
      b) Descompactar pasta e acessar o diretório kafka_2.12-2.4.0 (via terminal executar: ```cd kafka_2.12-2.4.0```);
@@ -42,7 +43,8 @@ Integrantes:
 
   3) Realizar o clone do projeto via git ```https://github.com/luizkt/projeto-int-dev-tools-2019.git```;
 		
-  4) Abrir o terminal e executar o script ```load-kafka-nodejs-unix.sh``` na raiz da pasta clonada. A aplicação em Node js irá ler o arquivo csv localizando na pasta ```files```;
+  4) Abrir o terminal e executar o script ```load-kafka-nodejs-unix.sh``` na raiz da pasta clonada. 
+  	A aplicação em Node js irá ler o arquivo csv localizando na pasta ```files```;
       
      a) Tópico criado automaticamente - "entrada";
      
@@ -50,7 +52,7 @@ Integrantes:
   
   5) Abrir 3 sessões no terminal e executar os seguintes scripts em Python em cada sessão, navegando a partir da raiz do projeto:
   
-     a) ```python ./consumers/pythonConsumer.py```; Quantidade de beneficíarios por Estado e somatória do benefício por Estado;
+     a) ```python ./consumers/pythonConsumer.py```; Quantidade de beneficíarios por Estado e somatória do benefício;
      
      b) ```python ./consumers/pythonConsumer2.py```; Beneficiário com maior benefício recebido;
      
