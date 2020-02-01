@@ -28,8 +28,10 @@ Integrantes:
      d) Pip ```sudo apt-get install python-pip```;
      
      e) plugin Pip ```pip install kafka-python```;
+	 
+	 f) Open JDK 11 ```sudo apt install openjdk-11-jdk```
      
-     f) terminator (opcional) ```sudo apt-get install terminator``` ;
+     g) terminator (opcional) ```sudo apt-get install terminator``` ;
   
   2) Executar o Kafka:
   
@@ -37,11 +39,11 @@ Integrantes:
      
      b) Descompactar pasta e acessar o diretório kafka_2.12-2.4.0 (via terminal executar: ```cd kafka_2.12-2.4.0```);
      
-     c) Iniciar o Zookeeper (em uma sessão do terminal executar: ```bin/zookeeper-server-start.sh config/zookeeper.properties ```);
+     c) Iniciar o Zookeeper (em uma sessão do terminal executar: ```bin/zookeeper-server-start.sh config/zookeeper.properties```);
      
      d) Iniciar o Kafka (em uma sessão do terminal executar: ```bin/kafka-server-start.sh config/server.properties```);
 
-  3) Realizar o clone do projeto via git ```https://github.com/luizkt/projeto-int-dev-tools-2019.git```;
+  3) Realizar o clone do projeto via git ```https://github.com/luizkt/projeto-int-dev-tools-2019.git``` e utilizar a branch "master";
 		
   4) Abrir o terminal e executar o script ```load-kafka-nodejs-unix.sh``` na raiz da pasta clonada. 
   	A aplicação em Node js irá ler o arquivo csv localizando na pasta ```files```;
@@ -57,6 +59,8 @@ Integrantes:
      b) ```python ./consumers/pythonConsumer2.py```; Beneficiário com maior benefício recebido;
      
      c) ```python ./consumers/pythonConsumer3.py```; Quantidade de registros consumidos;
+     
+  6) Acompanhar execução conforme video abaixo (Execução com 10999 linhas processadas)
   
   ![ExecucaoLocal](https://github.com/luizkt/projeto-int-dev-tools-2019/blob/master/ExecucaoLocal.gif)
 
