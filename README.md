@@ -18,7 +18,7 @@ Integrantes:
 ## Big Picture da solução
 ![big_picture](https://github.com/luizkt/projeto-int-dev-tools-2019/blob/master/big_picture.png)
 	
-## Para executar o processo (execução local ubuntu) deve seguir os passos abaixo:
+## Para executar o processo (execução local ubuntu ou docker) deve seguir os passos abaixo:
   1) Ter instalado as seguintes aplicações:
   
      a) Node js ```sudo apt install nodejs```;
@@ -33,7 +33,7 @@ Integrantes:
      
      f) terminator (opcional) ```sudo apt-get install terminator``` ;
   
-  2) Executar o Kafka:
+  2) Executar o Kafka (local ou via docker):
   
      a) Realizar o download do Kafka https://kafka.apache.org/quickstart;
      
@@ -45,7 +45,7 @@ Integrantes:
      
      ou
      
-     a) Executar o comando `docker-compose up` no local do arquivo docker-compose.yml na raiz do projeto. O arquivo vai executar um conteiner de zookeeper e outro de kafka.
+     e) Executar o comando `docker-compose up` no local do arquivo docker-compose.yml na raiz do projeto. O arquivo vai executar um conteiner de zookeeper e outro de kafka.
 
   3) Realizar o clone do projeto via git ```https://github.com/luizkt/projeto-int-dev-tools-2019.git``` e utilizar a branch "master";
 		
