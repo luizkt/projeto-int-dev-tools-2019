@@ -13,6 +13,8 @@ Integrantes:
     
     Vitor de Menezes Cardoso    - RM 333756
     
+    Milton Luiz Ribeiro Junior  - RM 333949
+    
 ## Big Picture da solução
 ![big_picture](https://github.com/luizkt/projeto-int-dev-tools-2019/blob/master/big_picture.png)
 	
