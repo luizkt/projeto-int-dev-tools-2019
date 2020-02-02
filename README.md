@@ -51,9 +51,7 @@ Integrantes:
 		
   4) Abrir o terminal e executar o script ```load-kafka-nodejs-unix.sh``` na raiz da pasta clonada. 
   
-     a) O script vai resolver as dependencias do node.
-     
-     a) A aplicação em Node js irá ler o arquivo csv dos beneficiários do bolsa família (2019_01) localizando na pasta ```files```;
+     a) O script vai resolver as dependencias do node e aplicação em Node js irá ler o arquivo csv dos beneficiários do bolsa família (2019_01) localizando na pasta ```files```;
       
      b) O Tópico é criado automaticamente no producer com o nome "entrada", mas caso queira criar o tópico antes, executar no terminal após o passo 2.d) o comando ```bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic entrada``` 
      
