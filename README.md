@@ -21,17 +21,15 @@ Integrantes:
   
      a) Node js ```sudo apt install nodejs```;
      
-     b) plugin Csv-parser ```npm i csv-parser```;
+     b) Python ```sudo apt-get install python3.6```;
      
-     c) Python ```sudo apt-get install python3.6```;
+     c) Pip ```sudo apt-get install python-pip```;
      
-     d) Pip ```sudo apt-get install python-pip```;
-     
-     e) plugin pip kafka-python ```pip install kafka-python```;
+     d) plugin pip kafka-python ```pip install kafka-python```;
 	 
-     f) Open JDK 11 ```sudo apt install openjdk-11-jdk```
+     r) Open JDK 11 ```sudo apt install openjdk-11-jdk```
      
-     g) terminator (opcional) ```sudo apt-get install terminator``` ;
+     f) terminator (opcional) ```sudo apt-get install terminator``` ;
   
   2) Executar o Kafka:
   
@@ -42,16 +40,22 @@ Integrantes:
      c) Iniciar o Zookeeper (em uma sessão do terminal executar: ```bin/zookeeper-server-start.sh config/zookeeper.properties```);
      
      d) Iniciar o Kafka (em uma sessão do terminal executar: ```bin/kafka-server-start.sh config/server.properties```);
+     
+     ou
+     
+     a) Executar o comando `docker-compose up` no local do arquivo docker-compose.yml na raiz do projeto. O arquivo vai executar um conteiner de zookeeper e outro de kafka.
 
   3) Realizar o clone do projeto via git ```https://github.com/luizkt/projeto-int-dev-tools-2019.git``` e utilizar a branch "master";
 		
   4) Abrir o terminal e executar o script ```load-kafka-nodejs-unix.sh``` na raiz da pasta clonada. 
   
+     a) O script vai resolver as dependencias do node.
+     
      a) A aplicação em Node js irá ler o arquivo csv dos beneficiários do bolsa família (2019_01) localizando na pasta ```files```;
       
      b) O Tópico é criado automaticamente no producer com o nome "entrada", mas caso queira criar o tópico antes, executar no terminal após o passo 2.d) o comando ```bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic entrada``` 
      
-     c) Aplicação passa a produzir os registros para o tópico "entrada", teste com 11000 registros.
+     c) Aplicação passa a produzir os registros para o tópico "entrada", teste com 10999 registros.
   
   5) Abrir 3 sessões no terminal e executar os seguintes scripts em Python em cada sessão, navegando a partir da raiz do projeto:
   
