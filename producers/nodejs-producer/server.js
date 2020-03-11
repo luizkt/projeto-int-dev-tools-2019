@@ -11,11 +11,6 @@ app.get('/load', function (request, response) {
     parser.execute(inputFile);
 
     response.status(202).send();
-        /*.then(() => {
-        response.status(204).send();
-    }).catch((error) => {
-        response.status(500).send(error);
-    });*/
 })
 
 app.listen(port, () => {
