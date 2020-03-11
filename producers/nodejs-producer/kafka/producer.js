@@ -2,7 +2,7 @@
 var kafka = require('kafka-node')
 var Producer = kafka.Producer
 // instantiate client with as connectstring host:port for  the ZooKeeper for the Kafka cluster
-var client = new kafka.KafkaClient("localhost:9092")
+var client = new kafka.KafkaClient({kafkaHost: process.env.KAFKA_CLIENT_ADDRESS || "localhost:9092"})
 
 // name of the topic to produce to
 var kafkaTopic = "entrada";
