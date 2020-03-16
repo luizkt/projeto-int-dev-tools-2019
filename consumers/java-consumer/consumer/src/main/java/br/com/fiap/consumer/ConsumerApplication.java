@@ -2,7 +2,6 @@ package br.com.fiap.consumer;
 
 import br.com.fiap.consumer.kafka.dto.KafkaMessage;
 import br.com.fiap.consumer.kafka.dto.Result;
-import javafx.scene.control.TableView;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.kafka.annotation.KafkaListener;
